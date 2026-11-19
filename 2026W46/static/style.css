@@ -1,0 +1,25 @@
+:root{--bg:#1E1410;--card:#2A1C15;--ink:#FFF4E0;--sec:#C9B49A;--rail:#4A3528;--wheat:#F2A93B;--owheat:#8C7A5E;--pump:#E4572E;--bronze:#B8864B;--cran:#B3203F}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#1E1410;width:1000px;height:617px;overflow:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;font-variant-numeric:tabular-nums;color:var(--ink)}
+#app{width:1000px;height:617px;overflow:hidden;position:relative;background:var(--bg)}
+svg{display:block;font-family:inherit}
+text{font-family:inherit;font-variant-numeric:tabular-nums;fill:var(--ink)}
+.sec{fill:var(--sec)} .pump{fill:var(--pump)} .wheat{fill:var(--wheat)}
+.mk{cursor:default;transition:opacity 160ms ease-out}
+.mk .sh{transition:transform 160ms ease-out}
+svg.dim .mk{opacity:.45} svg.dim .mk.hot{opacity:1}
+.fe .sh{transform-origin:0 0}
+.dt .sh{transform-box:fill-box;transform-origin:center}
+.mk.hot text{font-weight:700}
+.fe .sh .leaf{animation:grow 600ms cubic-bezier(.2,.8,.2,1) backwards;animation-delay:var(--d,0ms);transform-origin:0 0}
+.dt .sl{animation:slide 500ms cubic-bezier(.2,.8,.2,1) backwards;animation-delay:var(--d,0ms)}
+.ann{animation:fade 300ms ease 1100ms backwards}
+@keyframes grow{from{transform:scaleY(0)}}
+@keyframes slide{from{transform:translateX(-120px);opacity:0}}
+@keyframes fade{from{opacity:0}}
+#tip{background:#2A1C15;border:1px solid #4A3528;color:#FFF4E0;box-shadow:0 8px 24px rgba(0,0,0,.5);border-radius:10px;font-family:inherit}
+#tip .n{font-weight:700;font-size:13px;color:#FFF4E0}
+#tip .m{color:#C9B49A;font-size:12px;margin-top:2px}
+#tip .m b{color:#FFF4E0;font-weight:600}
+@media (prefers-reduced-motion:reduce){.fe .sh .leaf,.dt .sl,.ann{animation:none!important}.mk,.mk .sh{transition:none!important}}

@@ -1,0 +1,9 @@
+#tip { position: fixed; left: 0; top: 0; z-index: 20; pointer-events: none; will-change: transform; max-width: 280px;
+  visibility: hidden; opacity: 0; padding: 11px 13px; border-radius: 12px; background: #fff; border: 1px solid rgba(18,21,28,.12);
+  box-shadow: 0 10px 30px rgba(18,21,28,.18); font-size: 13.5px;
+  transition: transform 260ms cubic-bezier(.22,.61,.36,1), opacity 120ms, visibility 0s linear 120ms; }
+#tip.on { visibility: visible; opacity: 1; transition: transform 260ms cubic-bezier(.22,.61,.36,1), opacity 120ms, visibility 0s; }
+#tip.no-tr { transition: none; }
+#tip .n { font-weight: 800; font-size: 15px; }
+#tip .m { color: #6a7180; font-size: 12.5px; margin-top: 1px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
